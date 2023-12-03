@@ -2,6 +2,7 @@
 title: 双十一献礼 | Nacos Star破两万的回顾与展望
 keywords: Nacos,双十一
 description: 双十一献礼 | Nacos Star破两万的回顾与展望
+date: 2021-11-03
 ---
 
 # 双十一献礼 | Nacos Star破两万的回顾与展望
@@ -11,7 +12,7 @@ description: 双十一献礼 | Nacos Star破两万的回顾与展望
 
 ![image1.png](/img/up_to_2w/image1.png)
 
-Nacos是Nacos团队[三位一体](https://yqh.aliyun.com/live/detail/26356)战略的重要一环，它是一个更易于构建云原生生态的动态服务发现、配置管理和服务管理平台，它起源于阿里巴巴内部经过十年双十一洪峰考验的VIPServer/Configserver/Diamond三款产品，沉淀了简单易用、稳定可靠、性能卓越的核心竞争力，为广大开源用户提供了经过经过充分生产验证过的服务注册与配置中心产品。 
+Nacos是Nacos团队[三位一体](https://yqh.aliyun.com/live/detail/26356)战略的重要一环，它是一个更易于构建云原生生态的动态服务发现、配置管理和服务管理平台，它起源于阿里巴巴内部经过十年双十一洪峰考验的VIPServer/Configserver/Diamond三款产品，沉淀了简单易用、稳定可靠、性能卓越的核心竞争力，为广大开源用户提供了经过经过充分生产验证过的服务注册与配置中心产品。
 截止目前，Nacos已发布40个迭代版本，无缝支持Dubbo/Spring-Cloud/服务网格生态。吸引了200多位优秀贡献者，积累了虎牙、好未来、小米等多家企业案例，官网累计获取44w+用户浏览；借此机会，我们代表 Nacos 社区一起回顾开源三年以来的发展历程和未来的发展方向。
 
 ![image2.png](/img/up_to_2w/image2.png)
@@ -109,7 +110,7 @@ Nacos社区将和Spring Cloud、Dubbo、Envoy、Dapr等社区一起推动微服�
 ![image11.png](/img/up_to_2w/image12.png)
 
 
-除了这些已经成为Committer和参加了官方活动的贡献者，Nacos 还收获了其他大量作出优秀帮助的贡献者，目前已有200+ Contributors，非常感谢你们的付出！我们一起让Nacos更强大！！！ 
+除了这些已经成为Committer和参加了官方活动的贡献者，Nacos 还收获了其他大量作出优秀帮助的贡献者，目前已有200+ Contributors，非常感谢你们的付出！我们一起让Nacos更强大！！！
 
 ![image12.png](/img/up_to_2w/image13.png)
 

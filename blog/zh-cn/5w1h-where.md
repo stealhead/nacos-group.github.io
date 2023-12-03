@@ -2,6 +2,7 @@
 title: Nacos 有哪些典型的应用场景？—— 配置管理篇
 keywords: nacos
 description: Nacos 配置管理有哪些典型的应用场景？
+date: 2018-12-06
 ---
 
 # Nacos 有哪些典型的应用场景？—— 配置管理篇
@@ -176,7 +177,7 @@ public class NacosDynamicFlowDemo {
         ReadableDataSource<String, List<FlowRule>> flowRuleDataSource = new NacosDataSource<>(remoteAddress, groupId, dataId,
             source -> JSON.parseObject(source, new TypeReference<List<FlowRule>>() {}));
         FlowRuleManager.register2Property(flowRuleDataSource.getProperty());
-        
+
         // Assume we config: resource is `TestResource`, initial QPS threshold is 5.
         FlowQpsRunner runner = new FlowQpsRunner(KEY, 1, 10000);
         runner.simulateTraffic();

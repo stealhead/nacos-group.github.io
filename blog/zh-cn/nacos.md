@@ -2,6 +2,7 @@
 title: Nacos 0.1.0 版本Review 活动设计
 keywords: nacos 0.1.0
 description: Nacos 0.1.0 版本Review 活动设计
+date: 2018-11-15
 ---
 
 # Nacos 0.1.0 版本Review 活动设计
@@ -21,7 +22,7 @@ description: Nacos 0.1.0 版本Review 活动设计
 
 * 扫描 “超哥” 微信2微码，让超哥帮助加入 “Nacos社区交流群”
 
-	![微信二维码](https://cdn.yuque.com/lark/0/2018/png/11189/1532004866850-5e03b901-6d76-4380-b7bf-66e227808bdc.png) 
+	![微信二维码](https://cdn.yuque.com/lark/0/2018/png/11189/1532004866850-5e03b901-6d76-4380-b7bf-66e227808bdc.png)
 
 * 选择I 中的一个或者多个体验任务
 * 发现问题或者BUG之后，按照III中的《问题Report方式》，发一个相应的 github issue, 并指派给 @ github账号[xuechaos](https://github.com/xuechaos)
@@ -30,7 +31,7 @@ description: Nacos 0.1.0 版本Review 活动设计
 
 * 流程说明 TODO
 
-## IV. 奖励方式 
+## IV. 奖励方式
 
 * 我们正在为参与并作出突出贡献的小伙伴定制一些小礼品，会考虑快递给过程中有突出贡献的小伙伴
 * 礼物虽轻，但希望能表达对你们的帮助的感激之情的万一

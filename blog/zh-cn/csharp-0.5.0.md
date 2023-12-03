@@ -2,6 +2,7 @@
 title: Nacos-sdk-csharp 0.5.0正式发布，功能与Java版本对齐！
 keywords: csharp, sdk
 description: Nacos-sdk-csharp 0.5.0正式发布，功能与Java版本对齐！
+date: 2020-09-03
 ---
 
 # nacos-sdk-csharp 0.5.0版本已经发布了！
@@ -32,7 +33,7 @@ Nacos社区和阿里巴巴编程之夏的成果远不止此，很快将会有cpp
 如果您想开始着手，可以选择github仓库中有以下标签的issues。
 
  -  [good first issue](https://github.com/alibaba/nacos/labels/good%20first%20issue) ：对于新手来说是非常好的入门issues。
- 
+
  -  [contribution welcome](https://github.com/alibaba/nacos/labels/contribution%20欢迎) ：非常需要解决的问题和非常重要的模块，但目前缺少贡献者，欢迎贡献者来贡献。
 
 除了以上的通用标签，还可以关注Nacos的多语言共建，目前我们已经支持各类主流语言：

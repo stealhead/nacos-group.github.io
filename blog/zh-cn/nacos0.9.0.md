@@ -2,6 +2,7 @@
 title: Nacos 0.9.0版本进行发布
 keywords: nacos0.9，nacos0.9.0，nacos
 description: Nacos 0.9.0版本进行发布
+date: 2019-03-07
 ---
 # Nacos 0.9.0 发布，稳定的快速迭代
 天下武功，唯快不破，Nacos一直秉承着稳定性和快速迭代，Nacos 0.9.0版本于上周正式发布release，功能围绕着，Nacos-Sync的稳定性、Server功能拆分部署、Nacos python语言体系的支持，并且在此基础之上，Nacos首次发布核心团队人员，并在持续招募中。
@@ -24,7 +25,7 @@ Grafana是一款强大的数据可视化开源软件，能通过非常漂亮的�
 
 Nacos-Sync监控同样也分为三个模块:
 
-* nacos-sync monitor展示核心监控项 
+* nacos-sync monitor展示核心监控项
 ![monitor](https://img.alicdn.com/tfs/TB1GeNWKmzqK1RjSZFHXXb3CpXa-2834-1588.png)
 * nacos-sync detail和alert两个模块的展示监控曲线和告警
 ![detail](https://img.alicdn.com/tfs/TB1kP8UKbvpK1RjSZPiXXbmwXXa-2834-1570.png)
@@ -60,10 +61,10 @@ Nacos开始支持python语言体系，兼容Nacos0.8.0版本，[Nacos-sdk—Pyth
 如果您想开始着手，可以选择github仓库中有以下标签的issues。
 
  -  [good first issue](https://github.com/alibaba/nacos/labels/good%20first%20issue)：对于新手来说是非常好的入门issues。
- 
+
  -  [contribution welcome](https://github.com/alibaba/nacos/labels/contribution%20欢迎)：非常需要解决的问题和非常重要的模块，但目前缺少贡献者，欢迎贡献者来贡献。
 
- 
+
 除了以上的通用标签，还可以关注Nacos目前重点关注的多语言共建招募，[C++、PHP的多语言核心贡献者招募](https://github.com/alibaba/nacos/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+recruit+client)，和并且还有[社区群组负责人招募](https://github.com/alibaba/nacos/issues/787)，欢迎大家加入Nacos社区，贡献社区。用Apache的话说，**“社区高于代码”!**。
 
 ## 蓬勃发展的 Nacos 社区

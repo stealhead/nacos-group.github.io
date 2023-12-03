@@ -2,6 +2,7 @@
 title: Nacos 2.1.2、2.2.0-BETA及go-sdk 2.1.1 版本同时发布，多语言生态再添大将
 keywords: 2.1.2, 2.2.0-BETA, go-sdk, rust-sdk
 description: Nacos 2.1.2、2.2.0-BETA及go-sdk 2.1.1 版本同时发布，多语言生态再添大将。
+date: 2022-10-28
 ---
 
 # Nacos 2.1.2、2.2.0-BETA及go-sdk 2.1.1 版本同时发布，多语言生态再添大将
@@ -121,7 +122,7 @@ PHP语言作为老牌服务端编程语言，以往有不少用户询问关于PH
 
 ### Committer
 
-Nacos社区新晋级了两位Committer同学。 
+Nacos社区新晋级了两位Committer同学。
 
 自由开发者[onewe](https://github.com/onewe)同学主要优化统一了Nacos客户端的配置参数的加载逻辑，同时优化了LDAP鉴权插件和大量控制台使用内容，找到并修复了不少Nacos的问题。经社区PMC及Committer的投票表决，提名为Nacos社区的Committer。
 

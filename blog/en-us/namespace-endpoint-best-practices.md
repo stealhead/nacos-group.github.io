@@ -2,6 +2,7 @@
 title: Namespace,endpoint 最佳实践
 keywords: namespace,endpoint,最佳实践
 description: 随着使用 Nacos 的企业越来越多，遇到的最频繁的两个问题就是：如何在我的生产环境正确的来使用 namespace 以及 endpoint。
+date: 2019-12-06
 ---
 
 # Namespace, endpoint 最佳实践
@@ -25,7 +26,7 @@ namespace 的设计是 nacos 基于此做多环境以及多租户数据(**配置
 ![](http://edas.oss-cn-hangzhou.aliyuncs.com/deshao/pictures/nacos_multi_tenant_namespace.jpg)
 
   **注意:** 该功能还在规划中。
-  
+
 ### namespace 的最佳实践
 
 关于 namespace 的最佳实践，这部分主要包含有两个 Action：
@@ -33,7 +34,7 @@ namespace 的设计是 nacos 基于此做多环境以及多租户数据(**配置
 * 如何来获取 namespace 的值
 * namespace 参数初始化方式
 
-### 如何来获取 namespace 的值 
+### 如何来获取 namespace 的值
 
 无论您是基于 Spring Cloud 或者 Dubbo 来使用 nacos，都会涉及到 namespace 的参数输入，那么这个时候 namespace 的值从哪里可以获取呢？
 
@@ -64,7 +65,7 @@ nacos client 对 namespace 的初始化，主要包含两部分：
 
   可通过 **-Dnacos.use.cloud.namespace.parsing=true/false** 来控制是否需要在云环境自动解析 namespace 参数，默认为 **true**，是会自动解析，其目的就是方便用户上云时可以以零成本的方式平滑上云。如果用户在云上需要用自建的 nacos 下的 namespace，那这个时候只需将 **-Dnacos.use.cloud.namespace.parsing=false** 即可。
 
-  
+
 ## endpoint
 
 关于 endpoint ，也主要从 **endpoint 的设计背景** 和 **endpoint 的参数初始化** 两个方面来讨论。
@@ -75,7 +76,7 @@ nacos client 对 namespace 的初始化，主要包含两部分：
 
 ### endpoint 的参数初始化
 
-Nacos Client 提供一种可以对传入的 endpoint 参数规则解析的能力。即当通过构造函数的 **properties** 来初始化 endpoint 时，指定的 endpoint 值可以是一个具体的值，也可以是一个占位符的形式，如下所示: 
+Nacos Client 提供一种可以对传入的 endpoint 参数规则解析的能力。即当通过构造函数的 **properties** 来初始化 endpoint 时，指定的 endpoint 值可以是一个具体的值，也可以是一个占位符的形式，如下所示:
 
 > **\${endpoint.options:defaultValue}**。
 
@@ -86,7 +87,7 @@ Nacos Client 提供一种可以对传入的 endpoint 参数规则解析的能力
 
 整个 endpoint 的解析规则比较复杂，整体的一个解析流程图如下所示:
 
-![](http://edas.oss-cn-hangzhou.aliyuncs.com/deshao/nacos/nacos_endpoint.jpg)	
+![](http://edas.oss-cn-hangzhou.aliyuncs.com/deshao/nacos/nacos_endpoint.jpg)
 
 **注意：** 蓝色特别区分的是支持云环境下(阿里云上的 EDAS)自动从系统环境变量中来读取 endpoint 值，以此来达到用户本地开发或者将应用往云上迁移的时候以零成本的改造方式实现平滑上云。
 
@@ -97,30 +98,30 @@ Nacos Client 提供一种可以对传入的 endpoint 参数规则解析的能力
   1. 如果在初始化 Nacos Client 的时候，没有通过 properties 来指定 endpoint，这个时候会从系统环境变量中变量名为 **ALIBABA\_ALIWARE\_ENDPOINT\_URL** 指定的值来初始化，如果系统环境变量也没有设置，那么这个时候将会返回一个空字符串。
 
   2. 如果设置了 endpoint，
-  
+
 	  1. 设置的 endpoint 是一个指定具体的值。
 
 	     这时会先从系统环境变量中变量名为 **ALIBABA\_ALIWARE\_ENDPOINT\_URL** 指定的值来初始化，如果系统环境变量没有设置，那么这个时候用用户态传入的具体值来初始化 endpoint。
-	
+
 	  2. 以占位符的形式输入。
-	  
+
 	     这时会解析出具体占位符的值，然后:
-		
+
 	 	 1. 依次从系统属性和环境变量中来取值。
-	 	 
+
 	 	 	 例如，您输入的是 **${nacos.endpoint:defaultValue}**，那么解析出来的占位符是 **nacos.endpoint**。解析出来后，会先读取系统属性中(**即 System.getProperty("nacos.endpoint")**)是否设置了 **nacos.endpoint** 变量值，如果没有，则会从系统环境变量中变量名为 **nacos.endpoint** 指定的值来初始化。
-	 	 
+
 	 	 2. 如果通过解析出来的占位符还没有正确初始化 endpoint，则会从系统环境变量中变量名为 **ALIBABA\_ALIWARE\_ENDPOINT\_URL** 指定的值来初始化。
-	 	 
-	 	 3. 如果经过以上两步还没有被初始化，这时如果您设置了默认值，这个时候就会使用默认值来初始化 endpoint，否则的话以解析出来的占位符返回。	
-		
+
+	 	 3. 如果经过以上两步还没有被初始化，这时如果您设置了默认值，这个时候就会使用默认值来初始化 endpoint，否则的话以解析出来的占位符返回。
+
 * 关闭 endpoint 参数规则解析
 
   当关闭了 endpoint 参数规则解析的时候，这个时候就以用户态在构造 Nacos Client 时通过 properties 参数输入的 endpoint 值为主。
-  
+
 默认情况下， Nacos Client 是开启 endpoint 参数规则解析的能力。如果你想关闭该能力，有两种方式可以帮您来实现。
 
 1. 可在 Nacos Client 初始化的时候在传入的 properties 实例中指定 key 为 **isUseEndpointParsingRule**，值为 **false** 即可关闭。
-2. 如果您的应用是 Java 程序的应用，也可以通过 **-Dnacos.use.endpoint.parsing.rule=false** 来关闭。 
+2. 如果您的应用是 Java 程序的应用，也可以通过 **-Dnacos.use.endpoint.parsing.rule=false** 来关闭。
 
 **注意**：其中第一种方式的优先级高于第二种方式。

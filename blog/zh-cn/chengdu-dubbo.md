@@ -2,13 +2,14 @@
 title: Nacos 计划发布v0.2版本，进一步融合Dubbo和SpringCloud生态
 keywords: nacos,nacos0.2,alibaba,邢学超,Aliware Open Source,spring cloud
 description: Nacos 计划发布v0.2版本，进一步融合Dubbo和SpringCloud生态
+date: 2018-09-21
 ---
 
 # Nacos 计划发布v0.2版本，进一步融合Dubbo和SpringCloud生态
 
 在近期的Aliware Open Source 成都站的活动上，阿里巴巴高级工程师邢学超（于怀）分享了Nacos v0.2的规划和进度，并对Nacos v0.3的控制台进行了预览。Nacos v0.2将进一步融入Duboo和Spring Cloud生态，帮助开发者更好的在微服务场景下使用服务发现和动态配置管理。
 
-![undefined](https://cdn.nlark.com/lark/0/2018/png/11189/1537795153259-cc2c60c2-d7cb-431a-8858-cbd71b1c89e9.png) 
+![undefined](https://cdn.nlark.com/lark/0/2018/png/11189/1537795153259-cc2c60c2-d7cb-431a-8858-cbd71b1c89e9.png)
 
 嘉宾介绍：邢学超（于怀），Nacos开源项目主要推动者，负责阿里巴巴内部 configserver、skywalker和taokeeper产品的架构和研发，爱好代码、篮球、吉他和摇滚，还记得超哥给盲人小朋友写的那首超温暖的歌么？[传送门：给你们的歌](https://mp.weixin.qq.com/s?__biz=MzU4NzU0MDIzOQ==&mid=2247484141&idx=2&sn=30943616cf3d86393e906f82a3282bda&chksm=fdeb308dca9cb99b6ca0e04112d2f5994a2a9cbdb5f43e5c38ef0c592001ab78e1d0be390120&scene=21#wechat_redirect)
 
@@ -40,7 +41,7 @@ o	外部化配置（External Configuration）
 o	自动装配（Auto-Configure）
 
 Nacos将在v0.2支持原生Spring、Spring Boot、Spring Cloud中关于服务发现、配置管理的原生配置，适配Spring Boot、Spring Cloud标准，此外Nacos还是支持以下注解。
-![undefined](https://cdn.nlark.com/lark/0/2018/png/11189/1537795187129-bf48b9b1-3560-4081-99fc-b9c99497525b.png) 
+![undefined](https://cdn.nlark.com/lark/0/2018/png/11189/1537795187129-bf48b9b1-3560-4081-99fc-b9c99497525b.png)
 
 ## 3. Nacos 代码演示 & v0.3控制台预览
 
@@ -50,7 +51,7 @@ Nacos将在v0.2支持原生Spring、Spring Boot、Spring Cloud中关于服务发
 1. 服务发现模块，包括服务上下线管理、服务权重、服务打标、服务健康信息和服务元信息的展现;
 2. 配置模块，提供配置列表、监听查询、推送轨迹等功能。
 
-![undefined](https://cdn.nlark.com/lark/0/2018/png/11189/1537795211701-dc18d18c-99a6-40e0-824f-6519d8f8b434.png) 
+![undefined](https://cdn.nlark.com/lark/0/2018/png/11189/1537795211701-dc18d18c-99a6-40e0-824f-6519d8f8b434.png)
 
 
 ## 4. Nacos 社区介绍和招募计划

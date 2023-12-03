@@ -1,3 +1,10 @@
+---
+title: Nacos权限控制设计方案
+keywords: nacos,control,design
+description: Nacos权限控制设计方案
+date: 2019-12-19
+---
+
 # Nacos权限控制设计方案
 
 <a name="oBGKT"></a>
@@ -33,7 +40,7 @@ Nacos自开源以来，权限控制一直需求比较强烈，这也反应了用
 - RBAC： a. 规定**角色**可以对哪些**资源**进行哪些**操作** b. 规定**主体**拥有哪些**角色**当一个操作，同时满足a与b时，允许**操作**；
 - ABAC： 规定哪些**属性**的**主体**可以对哪些**属性**的**资源**在哪些**属性**的情况下进行哪些**操作**。
 <a name="0FxEV"></a>
-## 
+##
 <a name="0YQ9P"></a>
 ## 常见注册中心和配置中心的实现方式
 <a name="5yePW"></a>
@@ -68,14 +75,14 @@ Consul的鉴权也是偏向于ACL机制，主要分为三个部分：
 Eureka使用的鉴权是基于Spring Security实现的，支持用户名和密码的访问控制，一个简单的例子如下：<br />
 
 ```yaml
-spring: 
-  security: 
+spring:
+  security:
   # 开启认证，Spring Cloud2.0后添加jar会自动集成并开启
   #
-basic.enabled: true 
+basic.enabled: true
   # 用户名密码
-  user: 
-  name: test 
+  user:
+  name: test
   password: test
 ```
 

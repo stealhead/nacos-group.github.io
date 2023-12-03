@@ -1,3 +1,10 @@
+---
+title: Nacos Roadmap：Nacos GA后会有哪些大动作？
+keywords: nacos,Roadmap：Nacos
+description: Nacos Roadmap：Nacos GA后会有哪些大动作？
+date: 2019-07-08
+---
+
 # Nacos Roadmap：Nacos GA后会有哪些大动作？
 
 

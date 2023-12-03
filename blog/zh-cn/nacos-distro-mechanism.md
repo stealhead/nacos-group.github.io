@@ -2,6 +2,7 @@
 title: Nacos 的 Distro 一致性协议
 keywords: Nacos,Distro,一致性协议,AP
 description: 详解Nacos 的 Distro 一致性协议
+date: 2020-09-14
 ---
 
 转载且编辑自[Nacos 的 Distro 一致性协议](http://www.passjava.cn/#/13.SpringCloud架构剖析/07.Nacos配置注册中心/03.Nacos架构原理②：揭秘AP架构——Distro一致性协议)
@@ -218,7 +219,7 @@ com/alibaba/nacos/naming/controllers/DistroController.java
 
 在集群模式下，客户端只需要和其中一个 Nacos 节点通信就可以了，但是每个节点其实是包含所有客户端信息的，这样做的好处是每个 Nacos 节点只需要负责自己的客户端就可以（分摊压力），而当客户端想要拉取全量注册表到本地时，从任意节点都可以读取到（数据一致性）。
 
-那么 Nacos 集群之间是如何通过 Distro 协议来保持数据一致性的呢？ 
+那么 Nacos 集群之间是如何通过 Distro 协议来保持数据一致性的呢？
 
 ### 3.2 定期检验元数据
 

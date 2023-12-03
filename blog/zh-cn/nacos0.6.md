@@ -2,6 +2,7 @@
 title: Nacos 0.6版本发布，支持Dubbo生态并且支持Docker部署
 keywords: nacos0.6,dubbo,docker
 description: Nacos 0.6版本发布，支持Dubbo生态并且支持Docker部署
+date: 2018-11-29
 ---
 
 # Nacos 0.6版本发布，支持Dubbo生态并且支持Docker部署
@@ -114,7 +115,7 @@ docker-compose -f example/standalone.yaml up
 * 集群启动
 
 ```powershell
-docker-compose -f example/cluster-hostname.yaml up 
+docker-compose -f example/cluster-hostname.yaml up
 ```
 
 这时你的Nacos就已经启动起来，你就可以访问[http://localhost:8848/nacos/index.html](http://localhost:8848/nacos/index.html)体验Nacos的功能了。

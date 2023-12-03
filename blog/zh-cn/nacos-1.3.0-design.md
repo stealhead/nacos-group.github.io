@@ -2,6 +2,7 @@
 title: Nacos 1.3.0 全新内核构建过程
 keywords: nacos1.3.0,内核
 description: Nacos 1.3.0 全新内核构建过程
+date: 2020-02-12
 ---
 
 # Nacos 1.3.0 特性以及功能使用文档
@@ -393,43 +394,43 @@ public abstract class LogProcessor4CP extends LogProcessor {
  * A concrete implementation of CP protocol: JRaft
  *
  * <pre>
- *                                           ┌──────────────────────┐               
- *                                           │                      │               
- *            ┌──────────────────────┐       │                      ▼               
- *            │   ProtocolManager    │       │        ┌───────────────────────────┐ 
- *            └──────────────────────┘       │        │for p in [LogProcessor4CP] │ 
- *                        │                  │        └───────────────────────────┘ 
- *                        ▼                  │                      │               
- *      ┌──────────────────────────────────┐ │                      ▼               
- *      │    discovery LogProcessor4CP     │ │             ┌─────────────────┐      
- *      └──────────────────────────────────┘ │             │  get p.group()  │      
- *                        │                  │             └─────────────────┘      
- *                        ▼                  │                      │               
- *                 ┌─────────────┐           │                      │               
- *                 │ RaftConfig  │           │                      ▼               
+ *                                           ┌──────────────────────┐
+ *                                           │                      │
+ *            ┌──────────────────────┐       │                      ▼
+ *            │   ProtocolManager    │       │        ┌───────────────────────────┐
+ *            └──────────────────────┘       │        │for p in [LogProcessor4CP] │
+ *                        │                  │        └───────────────────────────┘
+ *                        ▼                  │                      │
+ *      ┌──────────────────────────────────┐ │                      ▼
+ *      │    discovery LogProcessor4CP     │ │             ┌─────────────────┐
+ *      └──────────────────────────────────┘ │             │  get p.group()  │
+ *                        │                  │             └─────────────────┘
+ *                        ▼                  │                      │
+ *                 ┌─────────────┐           │                      │
+ *                 │ RaftConfig  │           │                      ▼
  *                 └─────────────┘           │      ┌──────────────────────────────┐
  *                        │                  │      │  create raft group service   │
  *                        ▼                  │      └──────────────────────────────┘
- *              ┌──────────────────┐         │                                      
- *              │  JRaftProtocol   │         │                                      
- *              └──────────────────┘         │                                      
- *                        │                  │                                      
- *                     init()                │                                      
- *                        │                  │                                      
- *                        ▼                  │                                      
- *               ┌─────────────────┐         │                                      
- *               │   JRaftServer   │         │                                      
- *               └─────────────────┘         │                                      
- *                        │                  │                                      
- *                        │                  │                                      
- *                        ▼                  │                                      
- *             ┌────────────────────┐        │                                      
- *             │JRaftServer.start() │        │                                      
- *             └────────────────────┘        │                                      
- *                        │                  │                                      
- *                        └──────────────────┘                                      
+ *              ┌──────────────────┐         │
+ *              │  JRaftProtocol   │         │
+ *              └──────────────────┘         │
+ *                        │                  │
+ *                     init()                │
+ *                        │                  │
+ *                        ▼                  │
+ *               ┌─────────────────┐         │
+ *               │   JRaftServer   │         │
+ *               └─────────────────┘         │
+ *                        │                  │
+ *                        │                  │
+ *                        ▼                  │
+ *             ┌────────────────────┐        │
+ *             │JRaftServer.start() │        │
+ *             └────────────────────┘        │
+ *                        │                  │
+ *                        └──────────────────┘
  * </pre>
- * 
+ *
  * @author <a href="mailto:liaochuntao@live.com">liaochuntao</a>
  */
 ```
@@ -695,7 +696,7 @@ public void addConfigInfo(final String srcIp,
 					StringUtils.EMPTY :
 					configInfo.getTenant();
 		configInfo.setTenant(tenantTmp);
-        
+
         // 通过雪花ID算法获取数据库主键
 		long configId = idGeneratorManager.nextId(RESOURCE_CONFIG_INFO_ID);
 		long hisId = idGeneratorManager.nextId(RESOURCE_CONFIG_HISTORY_ID);

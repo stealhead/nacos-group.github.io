@@ -1,3 +1,10 @@
+---
+title: Nacos 1.2.0 权限控制介绍和使用
+keywords: nacos1.2.0 Access control
+description: Nacos 1.2.0 权限控制介绍和使用
+date: 2020-03-10
+---
+
 # Nacos 1.2.0 权限控制介绍和使用
 
 <a name="bc2d5709"></a>

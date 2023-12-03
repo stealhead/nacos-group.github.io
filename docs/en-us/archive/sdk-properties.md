@@ -1,3 +1,8 @@
+---
+title: Nacos,client,initialization
+keywords: Nacos,client,initialization
+description: Nacos client initialization instructions
+---
 Nacos 客户端初始化说明:
 
 ```
@@ -21,10 +26,10 @@ Nacos 客户端初始化说明:
 2. 通过接入点进行接入获取环境信息
 
 	```
-	ENDPOINT 接入点 
+	ENDPOINT 接入点
 	CLUSTER_NAME 集群名字
 	```
-	
+
 二、链接的server的路径（非必传）
 
 ```

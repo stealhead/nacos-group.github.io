@@ -1,3 +1,10 @@
+---
+title: Pilot MCP协议介绍
+keywords: nacos,Pilot MCP协议介绍
+description: Pilot MCP协议介绍
+date: 2019-11-20
+---
+
 # Pilot MCP协议介绍
 
 

@@ -2,14 +2,15 @@
 title: Consul与kubernetes整合公告[翻译]
 keywords: Consul,kubernetes
 description: Consul与kubernetes整合公告[翻译]
+date: 2018-09-02
 ---
 
 # Consul与kubernetes整合公告[翻译]
 ## 导读
 > Consul是目前业界比较火的服务发现与配置产品，它率先将服务发现和配置管理等分布式服务当中使用到的基础服务进行整合，对外提供分布式及高可用的服务。Consul目前有开源版本和商业化版本同时演进，这也是国内可以借鉴的一种开源策略。同时，Consul对于新技术趋势的跟进和整合，也是值得我们学习和参考的。
-> 
+>
 > 本文翻译了Consul对于Kubernetes的整合所发布的公告文章（[原文地址](https://www.hashicorp.com/blog/consul-plus-kubernetes)）。Consul通过支持Service Mesh，并提供对Kubernetes的无缝支持，与目前最受社区热捧的产品进行绑定，并通过功能预告的形式，来达到对产品宣传效果的最大化。
-> 
+>
 > 与Consul产品对应的，阿里巴巴在近期开源了其服务发现与配置管理产品[Nacos](https://nacos.io)。Nacos是阿里巴巴集团内部VIPServer、ConfigServer和Diamond三个支撑双十一的重要中间件产品整合而来。Nacos主要关注产品的极致易用以及与云原生的深度整合，主要支持服务发现、配置管理等功能。很快，Nacos也会与Service Mesh进行整合，同时在集团内部和开源进行发布，利用阿里巴巴丰富的场景和开源社区的力量，将Nacos打造成云原生生态中不可或缺的基础产品。
 
 我们很高兴地宣布HashiCorp Consul与Kubernetes深度整合的多项功能。 这篇文章将分享将在未来几周内发布的一系列初步功能。

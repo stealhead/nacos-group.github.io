@@ -2,6 +2,7 @@
 title: Eureka 2.0 开源工作宣告停止？别担心，ANS 即将 C位强势出道！
 keywords: Eureka 2.0
 description: Eureka 2.0 开源工作宣告停止？别担心，ANS 即将 C位强势出道！
+date: 2019-08-22
 ---
 
 # Eureka 2.0 开源工作宣告停止？别担心，ANS 即将 C位强势出道！
@@ -22,7 +23,7 @@ ANS 同样也支持 spring cloud 应用的服务注册与发现，同时默认�
 
 ### 服务提供者
 
-1. 创建一个 Spring Cloud 工程，命名为 service-provider。这里我们以 spring boot 1.5.8 和 spring cloud Dalston.SR4 为例。在 pom.xml 中引入需要的依赖内容。    
+1. 创建一个 Spring Cloud 工程，命名为 service-provider。这里我们以 spring boot 1.5.8 和 spring cloud Dalston.SR4 为例。在 pom.xml 中引入需要的依赖内容。
 	其他版本如 spring boot 2 + spring cloud Finchley 也同样支持，请您自行修改版本号和替换相应的组件依赖。
 
 		<parent>
@@ -31,8 +32,8 @@ ANS 同样也支持 spring cloud 应用的服务注册与发现，同时默认�
 			<version>1.5.8.RELEASE</version>
 			<relativePath/>
 		</parent>
-	
-	
+
+
 		<dependencies>
 			<dependency>
 				<groupId>com.alibaba.cloud</groupId>
@@ -45,7 +46,7 @@ ANS 同样也支持 spring cloud 应用的服务注册与发现，同时默认�
 				<version>1.1.3</version>
 			</dependency>
 		</dependencies>
-	
+
 		<dependencyManagement>
 			<dependencies>
 				<dependency>
@@ -64,7 +65,7 @@ ANS 同样也支持 spring cloud 应用的服务注册与发现，同时默认�
 		@SpringBootApplication
 		@EnableDiscoveryClient
 		public class ServerApplication {
-		
+
 		    public static void main(String[] args) {
 		        SpringApplication.run(ServerApplication.class, args);
 		    }
@@ -84,17 +85,17 @@ ANS 同样也支持 spring cloud 应用的服务注册与发现，同时默认�
 1. 权限配置，配置阿里云账号的 AccessKey、SecretKey，以及 EDAS 的命名空间信息。
 
 	1. 配置阿里云 AccessKey 和 SecretKey
-	
+
 		登陆 [阿里云AK管理控制台](https://usercenter.console.aliyun.com/#/accesskey)。找到 `用户信息管理` 下的 `安全信息管理`。
-	
+
 		复制 `AccessKey ID` 和 `Access Key Secret`，分别对应配置项中的 alibaba.cloud.access-key 和 alibaba.cloud.secret-key。
-	
+
 		安全凭证信息格式如下：
 
  			alibaba.cloud.access-key=xxxxxxxxxx
  			alibaba.cloud.secret-key=xxxxxxxxxx
-		
-		![2.png](https://cdn.yuque.com/lark/0/2018/png/54319/1531104058520-831f4dba-6279-4bd3-9632-899d29830868.png) 
+
+		![2.png](https://cdn.yuque.com/lark/0/2018/png/54319/1531104058520-831f4dba-6279-4bd3-9632-899d29830868.png)
 
 
 	1. 配置 EDAS 的命名空间
@@ -105,7 +106,7 @@ ANS 同样也支持 spring cloud 应用的服务注册与发现，同时默认�
 
 			alibaba.edas.namespace=xxxxxxxxxx
 
-		![1.png](https://cdn.yuque.com/lark/0/2018/png/54319/1531104049757-c3d2aefd-5d57-4434-a04f-2cd939cf58b0.png) 
+		![1.png](https://cdn.yuque.com/lark/0/2018/png/54319/1531104049757-c3d2aefd-5d57-4434-a04f-2cd939cf58b0.png)
 
 
 1. 综上，我们的配置文件 application.properties 内容最后是这样的。
@@ -118,12 +119,12 @@ ANS 同样也支持 spring cloud 应用的服务注册与发现，同时默认�
 
 
 1. 启动 service-provider 服务，在 EDAS 页面查看服务注册的信息。
-	
+
 	可以看到服务列表中已经存在的实例 service-provider，从详情页可以看到IP地址是本机的地址192.168.0.107,端口是 18081。
 
-	![3.JPG](https://cdn.yuque.com/lark/0/2018/jpeg/54319/1531104455581-1d9521aa-927e-4292-9d83-b1057ab67c02.jpeg) 
+	![3.JPG](https://cdn.yuque.com/lark/0/2018/jpeg/54319/1531104455581-1d9521aa-927e-4292-9d83-b1057ab67c02.jpeg)
 
-	![4.png](https://cdn.yuque.com/lark/0/2018/png/54319/1531104077485-48d3d67b-584d-4729-aef2-2fbb64c0b846.png) 
+	![4.png](https://cdn.yuque.com/lark/0/2018/png/54319/1531104077485-48d3d67b-584d-4729-aef2-2fbb64c0b846.png)
 
 ### 服务消费者
 
@@ -137,7 +138,7 @@ ANS 同样也支持 spring cloud 应用的服务注册与发现，同时默认�
 			<version>1.5.8.RELEASE</version>
 			<relativePath/>
 		</parent>
-	
+
 		<dependencies>
 			<dependency>
 				<groupId>com.alibaba.cloud</groupId>
@@ -150,7 +151,7 @@ ANS 同样也支持 spring cloud 应用的服务注册与发现，同时默认�
 				<version>1.1.3</version>
 			</dependency>
 		</dependencies>
-	
+
 		<dependencyManagement>
 			<dependencies>
 				<dependency>
@@ -181,7 +182,7 @@ ANS 同样也支持 spring cloud 应用的服务注册与发现，同时默认�
 	1. 在启动类中，添加 @LoadBalanced 注解将 RestTemplate 与 AsyncRestTemplate 与服务发现结合。
 
 	最终启动类的代码如下
-	
+
 		@SpringBootApplication
 		@EnableDiscoveryClient
 		@EnableFeignClients
@@ -191,31 +192,31 @@ ANS 同样也支持 spring cloud 应用的服务注册与发现，同时默认�
 			public RestTemplate restTemplate() {
 				return new RestTemplate();
 			}
-		
+
 			@LoadBalanced
 			@Bean
 			public AsyncRestTemplate asyncRestTemplate(){
 				return new AsyncRestTemplate();
 			}
-			
+
 			public static void main(String[] args) {
 				SpringApplication.run(ConsumerApplication.class, args);
 			}
-		
+
 		}
 
 1. 创建一个Controller，供我们演示和验证服务发现功能使用。
 
 		@RestController
 		public class TestController {
-		
+
 		    @Autowired
 		    private RestTemplate restTemplate;
 		    @Autowired
 		    private AsyncRestTemplate asyncRestTemplate;
 		    @Autowired
 		    private  EchoService echoService;
-		
+
 		    @RequestMapping(value = "/echo-rest/{str}", method = RequestMethod.GET)
 		    public String rest(@PathVariable String str) {
 		        return restTemplate.getForObject("http://service-provider/echo/" + str, String.class);
@@ -230,7 +231,7 @@ ANS 同样也支持 spring cloud 应用的服务注册与发现，同时默认�
 		    public String feign(@PathVariable String str) {
 		        return echoService.echo(str);
 		    }
-		
+
 		}
 
 1. 最后，添加应用基本配置和阿里云 AK、SK 以及 EDAS 的 namespace。
@@ -244,9 +245,9 @@ ANS 同样也支持 spring cloud 应用的服务注册与发现，同时默认�
 1. 启动服务，首先查看EDAS控制台，查询服务，可以看到，服务注册成功了。
 
 	再对我们的演示 API 分别进行调用，可以看到调用都成功了。
-	![5.png](https://cdn.yuque.com/lark/0/2018/png/54319/1531104088354-7cc0fae7-95cf-4c62-a9ea-1b9a53908949.png) 
+	![5.png](https://cdn.yuque.com/lark/0/2018/png/54319/1531104088354-7cc0fae7-95cf-4c62-a9ea-1b9a53908949.png)
 
-	![6.png](https://cdn.yuque.com/lark/0/2018/png/54319/1531104133698-f9621e80-7cb1-4789-a88a-929f720b5c2b.png) 
+	![6.png](https://cdn.yuque.com/lark/0/2018/png/54319/1531104133698-f9621e80-7cb1-4789-a88a-929f720b5c2b.png)
 
 
 ##  Demo 下载
@@ -269,7 +270,7 @@ ANS 同样也支持 spring cloud 应用的服务注册与发现，同时默认�
 租户环境|spring.cloud.ans.env|DEFAULT|相同租户的相同环境下的服务才能互相发现|test
 
 ## 工作原理
- 
+
 下面我们将从 服务注册中心寻址、服务注册与下线、客户端结合、高可用、安全等多个方面来分析原理。
 
 ### 服务注册中心寻址
@@ -281,13 +282,13 @@ ANS 客户端通过地址服务器就能拿到 ANS Server端的地址。
 服务注册的通信协议是 HTTP 协议，在 Spring 启动过程中，收到 EmbeddedServletContainerInitializedEvent 或 ServletWebServerInitializedEvent
 事件时，会将服务注册到 ANS Server 端。
 
-服务注册成功后，ANS client 端将会主动向 server 端发送心跳，当超过一定时间内 server 端没有收到 client 端的心跳时，会将服务标记成不可用，这样其他 client 在查询时就能发现此服务当前处于不可用的状态。  
+服务注册成功后，ANS client 端将会主动向 server 端发送心跳，当超过一定时间内 server 端没有收到 client 端的心跳时，会将服务标记成不可用，这样其他 client 在查询时就能发现此服务当前处于不可用的状态。
 如果短时间内，大量 client 与 server 心跳失败，则会出发降级保护机制，服务会暂时不被标记成不可用的状态。
 
 当应用程序停止时，收到 ContextClosedEvent 事件后，ANS client 会调用 server 端的反注册接口，将此服务下线。
 
 ### 客户端结合
-与客户端结合的方式， ans starter已经实现自动与 Ribbon 组件的结合。  
+与客户端结合的方式， ans starter已经实现自动与 Ribbon 组件的结合。
 
 Ribbon的关键接口有下面三个:
 
@@ -314,7 +315,7 @@ IPing       |提供 isAlive 方法，负责探测serverList中节点是否可用
 #### 服务端高可用
 
 ANS作为分布式系统，服务端高可用包含以下几个方面：
-	
+
 * 集群内机器数据对等，每台机器存储全量数据；
 * 支持机房容灾功能，即一个集群中的某个机房内的机器全部挂掉不影响服务；
 * 服务端异常自动探测，一旦某个机器挂了，该机器相关的任务（如健康检查）自动漂移到其他机器；

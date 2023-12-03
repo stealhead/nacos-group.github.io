@@ -1,3 +1,10 @@
+---
+title: 使用Nacos实现Spring Cloud Zuul的动态路由
+keywords: nacos
+description: 使用Nacos实现Spring Cloud Zuul的动态路由
+date: 2018-11-29
+---
+
 >authors:叶志远
 
 ### 一.前言
@@ -18,7 +25,7 @@ Nacos是阿里巴巴开源的致力于服务发现与管理、动态配置管理
 
     @Component
     public class PropertiesAssemble{
-    
+
     	public Map<String, ZuulRoute> getProperties() {
     		Map<String, ZuulRoute> routes = new LinkedHashMap<>();
     		List<ZuulRouteEntity> results = listenerNacos("zuul-server","zuul_route");
@@ -36,7 +43,7 @@ Nacos是阿里巴巴开源的致力于服务发现与管理、动态配置管理
     		}
     		return routes;
     	}
-    
+
     	private List<ZuulRouteEntity> listenerNacos (String dataId, String group) {
     		try {
     			Properties properties = new Properties();

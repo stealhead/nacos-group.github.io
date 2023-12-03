@@ -2,6 +2,7 @@
 title: Nacos 0.8.0版本进行发布
 keywords: nacos0.8,nacos0.8.0,nacos 发布
 description: Nacos 0.8.0版本进行发布
+date: 2019-01-20
 ---
 
 # Dubbo Nacos 发布 v0.8.0 PRE-GA版本，安全稳定上生产
@@ -38,7 +39,7 @@ Nacos 通过micrometer统计了运行时的核心指标：
 <br /><br />grafana具备强大的的数据可视化能力，能将采集的数据展示出来，支持多种数据源。同时可对重要指标配置告警规则，数据达到阈值时可以通知相关负责人。<br />Nacos官网提供了结合prometheus和grafana实现metrics监控<br /><br /><br />![](https://intranetproxy.alipay.com/skylark/lark/0/2019/png/53357/1548122164953-6011a9ee-a521-447c-a871-7ebcf10c2ce4.png#align=left&display=inline&height=417&linkTarget=_blank&originHeight=1584&originWidth=2832&size=0&width=746)
 
 具体的详情可以参考官网[监控文档](https://nacos.io/zh-cn/docs/monitor-guide.html)。
-### 
+###
 ### Nacos-Sync 支持服务平滑迁移
 
 提供Nacos-Sync同步工具支持用户做服务数据的平滑迁移迁移，支持用户从其他注册中心平滑迁移到Nacos上来，同时支持多个Region独立Nacos服务同步，目前Nacos-Sync支持的源注册中心主要包括ZooKeeper,Eureka等。

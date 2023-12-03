@@ -2,6 +2,7 @@
 title: Nacos 1.3.0 new kernel construction process
 keywords: nacos1.3.0,kernel
 description: Nacos 1.3.0 new kernel construction process
+date: 2020-02-12
 ---
 
 # Nacos 1.3.0 Documentation of features and functionality
@@ -397,43 +398,43 @@ After the consistency protocol layer is abstracted, the rest is the choice of co
  * A concrete implementation of CP protocol: JRaft
  *
  * <pre>
- *                                           ┌──────────────────────┐               
- *                                           │                      │               
- *            ┌──────────────────────┐       │                      ▼               
- *            │   ProtocolManager    │       │        ┌───────────────────────────┐ 
- *            └──────────────────────┘       │        │for p in [LogProcessor4CP] │ 
- *                        │                  │        └───────────────────────────┘ 
- *                        ▼                  │                      │               
- *      ┌──────────────────────────────────┐ │                      ▼               
- *      │    discovery LogProcessor4CP     │ │             ┌─────────────────┐      
- *      └──────────────────────────────────┘ │             │  get p.group()  │      
- *                        │                  │             └─────────────────┘      
- *                        ▼                  │                      │               
- *                 ┌─────────────┐           │                      │               
- *                 │ RaftConfig  │           │                      ▼               
+ *                                           ┌──────────────────────┐
+ *                                           │                      │
+ *            ┌──────────────────────┐       │                      ▼
+ *            │   ProtocolManager    │       │        ┌───────────────────────────┐
+ *            └──────────────────────┘       │        │for p in [LogProcessor4CP] │
+ *                        │                  │        └───────────────────────────┘
+ *                        ▼                  │                      │
+ *      ┌──────────────────────────────────┐ │                      ▼
+ *      │    discovery LogProcessor4CP     │ │             ┌─────────────────┐
+ *      └──────────────────────────────────┘ │             │  get p.group()  │
+ *                        │                  │             └─────────────────┘
+ *                        ▼                  │                      │
+ *                 ┌─────────────┐           │                      │
+ *                 │ RaftConfig  │           │                      ▼
  *                 └─────────────┘           │      ┌──────────────────────────────┐
  *                        │                  │      │  create raft group service   │
  *                        ▼                  │      └──────────────────────────────┘
- *              ┌──────────────────┐         │                                      
- *              │  JRaftProtocol   │         │                                      
- *              └──────────────────┘         │                                      
- *                        │                  │                                      
- *                     init()                │                                      
- *                        │                  │                                      
- *                        ▼                  │                                      
- *               ┌─────────────────┐         │                                      
- *               │   JRaftServer   │         │                                      
- *               └─────────────────┘         │                                      
- *                        │                  │                                      
- *                        │                  │                                      
- *                        ▼                  │                                      
- *             ┌────────────────────┐        │                                      
- *             │JRaftServer.start() │        │                                      
- *             └────────────────────┘        │                                      
- *                        │                  │                                      
- *                        └──────────────────┘                                      
+ *              ┌──────────────────┐         │
+ *              │  JRaftProtocol   │         │
+ *              └──────────────────┘         │
+ *                        │                  │
+ *                     init()                │
+ *                        │                  │
+ *                        ▼                  │
+ *               ┌─────────────────┐         │
+ *               │   JRaftServer   │         │
+ *               └─────────────────┘         │
+ *                        │                  │
+ *                        │                  │
+ *                        ▼                  │
+ *             ┌────────────────────┐        │
+ *             │JRaftServer.start() │        │
+ *             └────────────────────┘        │
+ *                        │                  │
+ *                        └──────────────────┘
  * </pre>
- * 
+ *
  * @author <a href="mailto:liaochuntao@live.com">liaochuntao</a>
  */
 ```
@@ -675,7 +676,7 @@ public void addConfigInfo(final String srcIp,
 					StringUtils.EMPTY :
 					configInfo.getTenant();
 		configInfo.setTenant(tenantTmp);
-        
+
         // Obtain the database primary key through the snowflake ID algorithm
 		long configId = idGeneratorManager.nextId(RESOURCE_CONFIG_INFO_ID);
 		long hisId = idGeneratorManager.nextId(RESOURCE_CONFIG_HISTORY_ID);

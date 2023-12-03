@@ -2,6 +2,7 @@
 title: 在 Rainbond 中一键安装高可用 Nacos 集群
 keywords: nacos,kubernetes,rainbond,云原生
 description: 当前文档描述如何通过云原生应用管理平台 Rainbond 一键安装高可用 Nacos 集群。
+date: 2022-03-16
 ---
 
 # Rainbond Nacos
@@ -59,25 +60,25 @@ Rainbond 内置原生 Service Mesh 微服务框架，同时与 Spring Cloud、Du
 需要执行服务注册的其他微服务组件，可以在建立面向 Nacos 的[依赖关系](https://www.rainbond.com/docs/use-manual/user-manual/component-connection/regist_and_discover)后，使用 `${NACOS_HOST}:${NACOS_PORT}` 来连接到 Nacos 集群。
 
 * **服务注册**
-  
+
   ```bash
   curl -X PUT "http://${NACOS_HOST}:${NACOS_PORT}/nacos/v1/ns/instance?serviceName=nacos.naming.serviceName&ip=20.18.7.10&port=8080"
   ```
 
 * **服务发现**
-  
+
   ```bash
   curl -X GET "http://${NACOS_HOST}:${NACOS_PORT}/nacos/v1/ns/instance/list?serviceName=nacos.naming.serviceName"
   ```
 
 * **发布配置**
-  
+
   ```bash
   curl -X POST "http://${NACOS_HOST}:${NACOS_PORT}/nacos/v1/cs/configs?dataId=nacos.cfg.dataId&group=test&content=helloWorld"
   ```
 
 * **获取配置**
-  
+
   ```bash
   curl -X GET "http://${NACOS_HOST}:${NACOS_PORT}/nacos/v1/cs/configs?dataId=nacos.cfg.dataId&group=test"
   ```

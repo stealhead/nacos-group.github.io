@@ -1,3 +1,10 @@
+---
+title: Nacos环境隔离
+keywords: Nacos Environment Isolation
+description: Nacos环境隔离
+date: 2019-06-05
+---
+
 # Nacos环境隔离
 
 随着Nacos 0.8版本的release，Nacos离正式生产版本又近了一步（其实已经有不少企业已经上了生产，如虎牙）。一般而言，企业研发的流程一般是这样的：先在测试环境开发和测试功能，然后再灰度，最后发布到生产环境。并且，为了生产环境的稳定，测试环境需要跟生产环境隔离；必然要遇到一个问题：多环境问题，即多个环境的数据（如测试环境和生产环境）如何隔离？如何优雅的隔离（不需要用户做任何改动）。下文将就Nacos环境隔离问题，向大家介绍阿里在这方面的实践经验。
@@ -59,10 +66,10 @@
 
 上面讲了基于IP段做环境隔离的约束和基本原理，那么如何实现一个地址服务器呢。最简单的方法是基于nginx实现，利用nginx的geo模块，做IP端和环境的映射，然后利用nginx返回静态文件内容。
 
-- 
+-
 安装nginx [http://nginx.org/en/docs/install.html](http://nginx.org/en/docs/install.html)
 
-- 
+-
 在nginx-proxy.conf中配置geo映射，[参考这里](http://nginx.org/en/docs/http/ngx_http_geo_module.html)
 ```
 geo $env {
@@ -73,7 +80,7 @@ geo $env {
 ```
 
 
-- 
+-
 配置nginx根路径及转发规则，这里只需要简单的返回静态文件的内容；
 ```
 # 在http模块中配置根路径
@@ -86,7 +93,7 @@ location / {
 ```
 
 
-- 
+-
 配置Nacos服务端IP列表配置文件，在/tmp/hotdocs/nacos目录下配置以环境名结尾的文件，文件内容为IP，一行一个
 ```
 $ll /tmp/hotdocs/nacos/
@@ -101,7 +108,7 @@ $cat /tmp/hotdocs/nacos/serverlist
 ```
 
 
-- 
+-
 验证
 
 

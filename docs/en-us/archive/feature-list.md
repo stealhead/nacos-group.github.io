@@ -1,3 +1,10 @@
+---
+title: List of Nacos features and requirements
+keywords: Nacos,features
+description: List of Nacos features and requirements
+---
+
+
 # Nacos功能和需求列表
 
 本文列举了目前Nacos支持的主要功能和一些还未支持的需求排期，方便读者了解目前Nacos已经支持和计划支持的能力，同时所有计划支持的能力都开放给开发者进行认领，本文末有详细的认领教程。

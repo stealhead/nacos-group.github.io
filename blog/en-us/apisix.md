@@ -2,6 +2,7 @@
 title: Apache APISIX Realizes Service Discovery Based on Nacos
 keywords: Apache APISIX
 description: This article introduces the basic concepts of Apache APISIX and Nacos and Service Registry, and shows you the specific operation of Apache APISIX to realize service discovery based on Nacos.
+date: 2022-02-22
 ---
 
 # Background information
@@ -193,4 +194,4 @@ It can be seen from the example that the new route in Apache APISIX can find the
 
 This article introduces the concept of registry and how Apache APISIX cooperates with Nacos to implement routing proxy based on service discovery. How to use Apache APISIX with Nacos in actual scenarios depends on the specific business requirements and past technical architecture.
 
-To get more information about the `nacos` plugin description and full configuration list, you can refer to the [official documentation](https://apisix.apache.org/zh/docs/apisix/discovery/nacos). 
+To get more information about the `nacos` plugin description and full configuration list, you can refer to the [official documentation](https://apisix.apache.org/zh/docs/apisix/discovery/nacos).

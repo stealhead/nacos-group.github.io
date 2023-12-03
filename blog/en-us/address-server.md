@@ -1,3 +1,10 @@
+---
+title: Nacos Environment Isolation
+keywords: nacos,Environment,Isolation
+description: Nacos Environment Isolation
+date: 2019-06-05
+---
+
 # Nacos Environment Isolation
 
 With the release of Nacos version 0.8, Nacos is one step closer to a production release(In fact, many enterprises have been on the production, such as Huya Inc). Generally speaking, the process of enterprise research and development is generally like this: Features are developed and tested in a test environment, then grayscale, and finally released into production. In addition, in order to stabilize the production environment, the test environment needs to be isolated from the production environment. There is a problem that must be encountered: Multi-environment problem: How is data from multiple environments (such as test and production) isolated? How to gracefully isolate (without any changes by the user)? The following will introduce Alibaba's practical experience in this regard on the issue of Nacos environmental isolation.
@@ -59,10 +66,10 @@ Here's a quick overview of the basics:
 
 Now that we've covered the constraints and fundamentals of environment isolation based on IP segments, how do we implement an address server? The simplest method is based on nginx implementation, using nginx geo module, do IP end and environment mapping, and then use nginx to return static file content.
 
-- 
+-
 Install nginx [http://nginx.org/en/docs/install.html](http://nginx.org/en/docs/install.html)
 
-- 
+-
 Configure the geo mapping in nginx-proxy.conf. [Refer to here](http://nginx.org/en/docs/http/ngx_http_geo_module.html)
 ```
 geo $env {
@@ -73,7 +80,7 @@ geo $env {
 ```
 
 
-- 
+-
 To configure the nginx root path and forwarding rules, we simply return the contents of the static file.
 ```
 # Configure the root path in the http module
@@ -86,7 +93,7 @@ location / {
 ```
 
 
-- 
+-
 Configure the Nacos server IP list configuration file, in the /tmp/hotdocs/nacos directory to configure the file ending with the environment name, the file content is IP, one per line.
 ```
 $ll /tmp/hotdocs/nacos/
@@ -101,7 +108,7 @@ $cat /tmp/hotdocs/nacos/serverlist
 ```
 
 
-- 
+-
 Verification
 
 

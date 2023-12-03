@@ -2,6 +2,7 @@
 title: Install the HA Nacos cluster in Rainbond with one-click
 keywords: nacos,kubernetes,rainbond,cloudnative
 description: Current documentation describes how to install a high availability Nacos cluster with one click through Rainbond, a cloud native application management platform.
+date: 2022-03-16
 ---
 
 # Rainbond Nacos
@@ -58,25 +59,25 @@ After a few minutes, the Nacos cluster is installed and up and running.
 Other microservice components that need to perform service registration can connect to the Nacos cluster using `${NACOS_HOST}:${NACOS_PORT}` after built [dependencies](https://www.rainbond.com/docs/use-manual/user-manual/component-connection/regist_and_discover) to Nacos.
 
 * **Service registration**
-  
+
   ```bash
   curl -X PUT "http://${NACOS_HOST}:${NACOS_PORT}/nacos/v1/ns/instance?serviceName=nacos.naming.serviceName&ip=20.18.7.10&port=8080"
   ```
 
 * **Service discovery**
-  
+
   ```bash
   curl -X GET "http://${NACOS_HOST}:${NACOS_PORT}/nacos/v1/ns/instance/list?serviceName=nacos.naming.serviceName"
   ```
 
 * **Publish config**
-  
+
   ```bash
   curl -X POST "http://${NACOS_HOST}:${NACOS_PORT}/nacos/v1/cs/configs?dataId=nacos.cfg.dataId&group=test&content=helloWorld"
   ```
 
 * **Get config**
-  
+
   ```bash
   curl -X GET "http://${NACOS_HOST}:${NACOS_PORT}/nacos/v1/cs/configs?dataId=nacos.cfg.dataId&group=test"
   ```

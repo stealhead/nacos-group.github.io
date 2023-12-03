@@ -2,6 +2,7 @@
 title: Nacos 0.9.0版本进行发布
 keywords: nacos0.9,nacos0.9.0,nacos 发布
 description: Nacos 0.9.0版本进行发布
+date: 2019-02-28
 ---
 # Nacos 0.9.0版本发布啦
 
@@ -21,7 +22,7 @@ Nacos 发布 0.9.0 版本，该版本加强了 Nacos-Sync 稳定性，增加了�
 
 @paderlol、@jifengnan、@loadchange、@nkorange、@hxy1991、@huangyunbin、@darkness463、@luoxn28、@TsingLiang、@xuechaos、@nanamikon、@systp、@jameslcj、@pader.zhang
 
- 
+
 
 详情参考：https://github.com/alibaba/nacos/releases/tag/0.9.0
 
